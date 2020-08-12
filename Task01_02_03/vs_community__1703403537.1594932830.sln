@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "vs_community__1703403537.1594932830", "C:\Users\Cinthya\Downloads\vs_community__1703403537.1594932830.exe", "{DFF3707D-E212-4558-A86A-BDD8EB6F5BE2}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Users\Cinthya\Downloads\vs_community__1703403537.1594932830.exe
+		RemoteMachine = DESKTOP-067SPAB
+		StartingDirectory = C:\Users\Cinthya\Downloads
+		Environment = Padrão
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFF3707D-E212-4558-A86A-BDD8EB6F5BE2}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E172DAEF-E6E0-4BF6-B43A-95CDBDDE252E}
+	EndGlobalSection
+EndGlobal
