@@ -80,6 +80,7 @@ namespace ProjetoCLR {
 			this->txt_num1->Name = L"txt_num1";
 			this->txt_num1->Size = System::Drawing::Size(100, 22);
 			this->txt_num1->TabIndex = 0;
+			this->txt_num1->TextChanged += gcnew System::EventHandler(this, &Form1::txt_num1_TextChanged);
 			// 
 			// label1
 			// 
@@ -202,5 +203,7 @@ namespace ProjetoCLR {
 		}
 	
 	}
+private: System::Void txt_num1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
