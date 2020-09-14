@@ -269,49 +269,59 @@ namespace ProjetoCLR {
 
 		double tot_parc = 0, tot_final = 0;
 
-		if (rbn_somar3->Checked == true)
-		{
-			//testando as variáveis
-			tot_parc = parc1 + parc2 + parc3;
-		}
-		else
-		{
-			if (cbx_parc1->Checked == true)
+		//try
+		//{
+			//RadioButton
+			if (rbn_somar3->Checked == true)
 			{
-				tot_parc = tot_parc + parc1;
+				//testando as variáveis
+				tot_parc = parc1 + parc2 + parc3;
 			}
-			if (cbx_parc2->Checked == true)
+			else
 			{
-				tot_parc = tot_parc + parc2;
+				if (cbx_parc1->Checked == true)
+				{
+					tot_parc = tot_parc + parc1;
+				}
+				if (cbx_parc2->Checked == true)
+				{
+					tot_parc = tot_parc + parc2;
+				}
+				if (cbx_parc3->Checked == true)
+				{
+					tot_parc = tot_parc + parc3;
+				}
 			}
-			if (cbx_parc3->Checked == true)
-			{
-				tot_parc = tot_parc + parc3;
-			}
-		}
 
-		if (cbx_imp->Text == "5%" | cbx_imp->Text == "10%" | cbx_imp->Text == "20%")
-		{
-			if (cbx_imp->Text == "5%")
+			//ComboBox
+			if (cbx_imp->Text == "5%" | cbx_imp->Text == "10%" | cbx_imp->Text == "20%")
 			{
-				tot_final = tot_parc * 1.05;
-				txt_tot_parc->Text = Convert::ToString(tot_final);
+				if (cbx_imp->Text == "5%")
+				{
+					tot_final = tot_parc * 1.05;
+					txt_tot_parc->Text = Convert::ToString(tot_final);
+				}
+				if (cbx_imp->Text == "10%")
+				{
+					tot_final = tot_parc * 1.1;
+					txt_tot_parc->Text = Convert::ToString(tot_final);
+				}
+				if (cbx_imp->Text == "20%")
+				{
+					tot_final = tot_parc * 1.2;
+					txt_tot_parc->Text = Convert::ToString(tot_final);
+				}
 			}
-			if (cbx_imp->Text == "10%")
+			else
 			{
-				tot_final = tot_parc * 1.1;
-				txt_tot_parc->Text = Convert::ToString(tot_final);
+				txt_tot_parc->Text = Convert::ToString(tot_parc);
 			}
-			if (cbx_imp->Text == "20%")
-			{
-				tot_final = tot_parc * 1.2;
-				txt_tot_parc->Text = Convert::ToString(tot_final);
-			}
-		}
-		else
-		{
-			txt_tot_parc->Text = Convert::ToString(tot_parc);
-		}		
+		//}
+		//catch ()
+		//{
+			//MessageBox::Show("Preencha todas as parcelas. Use zero quando não houver.");
+		//}
+			
 	}
 };
 }
