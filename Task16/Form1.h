@@ -363,6 +363,8 @@ namespace ProjetoCLR {
 				p = i;
 				dataGridView1->Rows->RemoveAt(p);
 				MessageBox::Show("Removido");
+				i--; //linha seguinte tem o índice alterado
+				L = L - 1; //grid possui 1 linha a menos
 			}
 		}	
 		txt_busca->Text = " ";
