@@ -353,15 +353,14 @@ namespace ProjetoCLR {
 		int L = dataGridView1->Rows->Count; //total de linhas da grid
 		L = L - 1; //a linha vazia final é contabilizada pelo count, assim eliminamos-a
 
-
-		int p = -1; //guarda a posição da grid onde o nome for encontrado
+		String^ s;
 
 		for (int i = 0; i < L; i++)
 		{
-			if (txt_busca->Text->ToUpper() == dataGridView1->Rows[i]->Cells[0]->Value->ToString()->ToUpper())
+			s = Convert::ToString(dataGridView1->Rows[i]->Cells[0]->Value);
+			if (s->IsNullOrEmpty(s) == true)
 			{
-				p = i;
-				dataGridView1->Rows->RemoveAt(p);
+				dataGridView1->Rows->RemoveAt(i);
 				MessageBox::Show("Removido");
 				i--; //linha seguinte tem o índice alterado
 				L = L - 1; //grid possui 1 linha a menos
